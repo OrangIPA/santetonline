@@ -12,21 +12,26 @@ function mulaiSantet() {
 
 <template>
   <div
-    class="w-screen flex flex-col items-center py-2 h-screen"
+    class="w-screen flex flex-col items-center py-2 h-screen justify-between"
     :style="`background-image: url(${bg})`"
   >
-    <div class="text-4xl bg-red-200 p-3">Santet Online</div>
+    <div class="flex flex-col items-center">
+      <div class="text-4xl bg-red-200 p-3">Santet Online</div>
 
-    <div class="mt-28 bg-red-200 p-3">Masukkan nama:</div>
-    <div class="bg-red-200 p-3">
-      <input v-model="nama" type="text" class="border border-black px-0.5" />
+      <div class="mt-28 bg-red-200 p-3">Masukkan nama:</div>
+      <div class="bg-red-200 p-3">
+        <input v-model="nama" type="text" class="border border-black px-0.5" />
+      </div>
+      <button
+        @click="mulaiSantet"
+        class="mt-2 border px-1 bg-red-400 hover:bg-red-600 cursor-pointer"
+      >
+        Mulai Santet!
+      </button>
     </div>
-    <button
-      @click="mulaiSantet"
-      class="mt-2 border px-1 bg-red-400 hover:bg-red-600 cursor-pointer"
+    <a href="https://github.com/OrangIPA/santetonline"
+      class="text-blue-600">source code: github.com/OrangIPA/santetonline</a
     >
-      Mulai Santet!
-    </button>
   </div>
 
   <div
